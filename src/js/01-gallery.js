@@ -36,16 +36,3 @@ const onClick = (e) => {
 gallery.addEventListener("click", onClick);
 
 // закриття вікна esc
-
-const closeLightbox = () => {
-  instance.close();
-  window.removeEventListener("keydown", handleEscape);
-};
-
-const handleEscape = (e) => {
-  if (e.code === "Escape") {
-    closeLightbox();
-  }
-};
-
-window.addEventListener("keydown", handleEscape);
