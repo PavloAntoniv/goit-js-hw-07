@@ -39,7 +39,7 @@ body {
   margin: 16px;
   color: #212121;
   line-height: 1.5;
-
+  height: 100vh;
   background-size: 200%;
   background-image: linear-gradient(
     to bottom left,
