@@ -22,16 +22,3 @@ const lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
   captionType: "img",
 });
-
-const closeLightbox = () => {
-  instance.close();
-  window.removeEventListener("keydown", handleEscape);
-};
-
-const handleEscape = (e) => {
-  if (e.code === "Escape") {
-    closeLightbox();
-  }
-};
-
-window.addEventListener("keydown", handleEscape);

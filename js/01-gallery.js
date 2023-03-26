@@ -25,9 +25,12 @@ function createGaleryImg(items) {
 const onClick = (e) => {
   e.preventDefault();
 
-  const source = e.target.dataset.source;
-  if (!source) return;
+  const nodeName = e.target.nodeName;
+  if (nodeName !== "IMG") {
+    return;
+  }
 
+  const source = e.target.dataset.source;
   const instance = basicLightbox.create(`
     <img src="${source}" width="800" height="600">`);
 
